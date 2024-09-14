@@ -4,7 +4,7 @@ export default () => {
   return (
     <>
       <h2>Hello world!!</h2>
-      { console.log(tg) }
+      <div>{tg}</div>
     </>
   )
 }
