@@ -9,7 +9,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 0 10px -2px var(--tg-theme-button-color);
+    /* box-shadow: 0 0 10px -2px var(--tg-theme-button-color); */
     color: var(--tg-theme-button-text-color);
     background-color: var(--tg-theme-button-color);
     text-shadow: 0 0 5px rgba(0,0,0,.4);

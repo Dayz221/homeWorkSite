@@ -12,7 +12,6 @@ input {
 
 input:hover, input:focus {
     border-color: var(--tg-theme-button-color);
-    box-shadow: 0 0 10px -2px var(--tg-theme-button-color);
 }
 
 input::placeholder {
