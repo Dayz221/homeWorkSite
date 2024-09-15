@@ -44,5 +44,5 @@
 
 .user_id {
     font-size: 16px;
-    color: var(--tg-theme-accent-text-color);
+    color: var(--tg-theme-hint-color);
 }
