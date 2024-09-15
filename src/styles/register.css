@@ -22,7 +22,6 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    padding: 4px;
     border: 2px solid var(--tg-theme-accent-text-color);
     overflow: hidden;
 }
