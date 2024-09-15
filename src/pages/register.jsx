@@ -12,17 +12,17 @@ export default () => {
     const [isLoading, setLoading] = useState(true)
 
     useEffect(async () => {
-        const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id);
+        const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id)
 
         if (fileId) {
             const fileUrl = await getFile(fileId);
     
             if (fileUrl) {
-                console.log(`Фото профиля пользователя доступно по URL: ${fileUrl}`);
-                setUserPhoto(fileUrl);
+                console.log(`Фото профиля пользователя доступно по URL: ${fileUrl}`)
+                setUserPhoto(fileUrl)
             }
             
-            setLoading(false)
+            setTimeout(() => setLoading(false), 500)
         }
     }, [])
 
@@ -47,37 +47,33 @@ export default () => {
 
 
 async function getUserProfilePhotos(userId) {
-    const url = `https://api.telegram.org/bot${botToken}/getUserProfilePhotos?user_id=${userId}`;
+    const url = `https://api.telegram.org/bot${botToken}/getUserProfilePhotos?user_id=${userId}`
 
     try {
-        const response = await axios.get(url);
-        const photos = response.data.result.photos;
-        console.log(photos)
+        const response = await axios.get(url)
+        const photos = response.data.result.photos
 
         if (photos.length > 0) {
-            const fileId = photos[0][0].file_id;
-            console.log('File ID:', fileId);
-            return fileId;
+            const fileId = photos[0][0].file_id
+            return fileId
         } else {
-            console.log('У пользователя нет фотографий профиля.');
-            return null;
+            return null
         }
     } catch (error) {
-        console.error('Ошибка получения фотографий профиля:', error);
+        console.error('Ошибка получения фотографий профиля:', error)
     }
 }
 
 async function getFile(fileId) {
-    const url = `https://api.telegram.org/bot${botToken}/getFile?file_id=${fileId}`;
+    const url = `https://api.telegram.org/bot${botToken}/getFile?file_id=${fileId}`
 
     try {
-        const response = await axios.get(url);
-        const filePath = response.data.result.file_path;
-        const fileUrl = `https://api.telegram.org/file/bot${botToken}/${filePath}`;
+        const response = await axios.get(url)
+        const filePath = response.data.result.file_path
+        const fileUrl = `https://api.telegram.org/file/bot${botToken}/${filePath}`
 
-        console.log('URL файла:', fileUrl);
-        return fileUrl;
+        return fileUrl
     } catch (error) {
-        console.error('Ошибка получения файла:', error);
+        console.error('Ошибка получения файла:', error)
     }
 }
