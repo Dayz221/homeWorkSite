@@ -1,5 +1,7 @@
+import Button from "../components/Button/Button.jsx"
+
 export default () => {
     return (
-        <h2> Страница Регистрации </h2>
+        <Button text="Зарегистрироваться" />
     )
 }

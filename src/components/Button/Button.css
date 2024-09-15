@@ -1,0 +1,6 @@
+button {
+    color: var(--tg-theme-button-text-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--tg-theme-button-color);
+}
