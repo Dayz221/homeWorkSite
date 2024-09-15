@@ -24,7 +24,7 @@ export default () => {
     }, [])
 
     return (
-        <div>
+        <div style={{position: "relative"}}>
             <div className="container" style={isLoading ? {display:"none"} : {}}>
                 <h2 className="mainLable">Регистрация</h2>
 
