@@ -22,6 +22,8 @@ export default () => {
                 </div>
             </div>
 
+            <div>{window.Telegram.WebApp.user.photo_url}</div>
+
             <Input type="password" placeholder="Введите пароль" />
             <Button text="Зарегистрироваться" fullWidth />
         </div>
