@@ -8,19 +8,20 @@
 
 .user_info {
     width: 100%;
-    background-color: var(--tg-theme-secondart-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color);
     border: 2px solid rgba(0,0,0,.5);
     padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: row;
+    border-radius: 10px;
 }
 
 .image_container {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    
+    overflow: hidden;
 }
 
 .image_container img {
@@ -30,17 +31,17 @@
 }
 
 .user_info_block {
-    margin-left: 10px;
-
+    margin-left: 15px;
 }
 
 .user_name {
     font-size: 18px;
     font-weight: 700;
     color: var(--tg-theme-text-color);
+    margin-bottom: 4px;
 }
 
 .user_id {
     font-size: 16px;
-    color: var(--th-theme-hint-color)
+    color: var(--tg-theme-hint-color);
 }

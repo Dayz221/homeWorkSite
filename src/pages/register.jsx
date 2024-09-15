@@ -35,8 +35,8 @@ export default () => {
                         <img src={userPhoto} />
                     </div>
                     <div className="user_info_block">
-                        <div className="user_name">{user.last_name ? user.first_name + user.last_name : user.first_name}</div>
-                        {user.username ? <div className="user_id">{user.username}</div> : null}
+                        <div className="user_name">{user.last_name ? user.first_name + " " + user.last_name : user.first_name}</div>
+                        {user.username ? <div className="user_id">{"@" + user.username}</div> : null}
                     </div>
                 </div>
 
