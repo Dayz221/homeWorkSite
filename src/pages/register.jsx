@@ -38,7 +38,7 @@ export default () => {
                 <Button text="Зарегистрироваться" fullWidth />
             </div>
             
-            <Loader state={isLoading} />
+            {isLoading ? <Loader /> : <></>}
         </div>
     )
 }
