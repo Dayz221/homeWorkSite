@@ -15,6 +15,7 @@
     align-items: center;
     flex-direction: row;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .image_container {
@@ -43,5 +44,5 @@
 
 .user_id {
     font-size: 16px;
-    color: var(--tg-theme-hint-color);
+    color: var(--tg-theme-accent-text-color);
 }

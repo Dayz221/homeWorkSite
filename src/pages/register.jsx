@@ -16,9 +16,7 @@ export default () => {
 
         if (fileId) {
             const fileUrl = await getFile(fileId);
-    
-            // if (fileUrl) setUserPhoto(fileUrl)
-            
+            if (fileUrl) setUserPhoto(fileUrl)
             setTimeout(() => setLoading(false), 300)
         }
     }, [])
