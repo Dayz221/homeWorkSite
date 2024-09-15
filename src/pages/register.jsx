@@ -1,6 +1,5 @@
 import Button from "../components/Button/Button.jsx"
 import Input from "../components/Input/Input.jsx"
-import PasswordInput from "../components/PasswordInput/PasswordInput.jsx"
 import '../styles/register.css'
 
 export default () => {
