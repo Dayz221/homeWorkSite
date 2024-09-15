@@ -19,7 +19,7 @@ export default () => {
     
             if (fileUrl) setUserPhoto(fileUrl)
             
-            setTimeout(() => setLoading(false), 10000)
+            setTimeout(() => setLoading(false), 300)
         }
     }, [])
 
