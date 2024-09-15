@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Button from "../components/Button/Button.jsx"
 import Input from "../components/Input/Input.jsx"
 import '../styles/register.css'
+import axios from "axios"
 
 const botToken = '7418386580:AAGfabRzlGwRS7nbj4w7ISZrSgQouzD7Msg';
 
