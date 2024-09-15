@@ -8,7 +8,7 @@ import Loader from "../components/Loader/Loader.jsx"
 const botToken = '7418386580:AAGfabRzlGwRS7nbj4w7ISZrSgQouzD7Msg';
 
 export default () => {
-    const [userPhoto, setUserPhoto] = useState('https://placehold.co/400')
+    const [userPhoto, setUserPhoto] = useState('https://gb.ru/blog/wp-content/uploads/2022/07/gradienta-LeG68PrXA6Y-unsplash.jpg')
     const [isLoading, setLoading] = useState(true)
 
     useEffect(async () => {
@@ -17,11 +17,13 @@ export default () => {
         if (fileId) {
             const fileUrl = await getFile(fileId);
     
-            if (fileUrl) setUserPhoto(fileUrl)
+            // if (fileUrl) setUserPhoto(fileUrl)
             
             setTimeout(() => setLoading(false), 300)
         }
     }, [])
+
+    const user = window.Telegram.WebApp.initDataUnsafe.user
 
     return (
         <div style={{position: "relative"}}>
@@ -31,6 +33,10 @@ export default () => {
                 <div className="user_info">
                     <div className="image_container">
                         <img src={userPhoto} />
+                    </div>
+                    <div className="user_info_block">
+                        <div className="user_name">{user.last_name ? user.first_name + user.last_name : user.first_name}</div>
+                        <div className="user_id">{user.username ? username : ""}</div>
                     </div>
                 </div>
 
