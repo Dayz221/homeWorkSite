@@ -47,7 +47,7 @@ async function getUserProfilePhotos(userId) {
         const photos = response.data.result.photos;
 
         if (photos.length > 0) {
-            const fileId = photos[0][0].file_id;
+            const fileId = photos[0][2].file_id;
             console.log('File ID:', fileId);
             return fileId;
         } else {
