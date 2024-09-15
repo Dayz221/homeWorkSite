@@ -5,7 +5,7 @@ button {
     background-color: var(--tg-theme-secondary-bg-color);
     color: var(--tg-theme-accent-text-color);
     transition: all .3s;
-    border: 2px solid var();
+    border: 2px solid var(--tg-theme-accent-text-color);
 }
 
 button:hover {
