@@ -1,6 +1,6 @@
 .mainLable {
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--tg-theme-text-color);
     font-size: 24px;
     margin: 10px 0 20px 0;
     text-align: center;

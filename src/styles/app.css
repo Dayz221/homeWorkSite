@@ -1,15 +1,6 @@
 html {
-    --background-color: #1E1E1E;
-    --second-background-color: #353536;
-    --text-color: white;
-    --hint-color: rgba(255, 255, 255, .6);
-    --destrictive-color: rgb(237, 58, 58);
-    --button-color: #212121;
-    --action-color: #8753FF;
-    --border-color: rgba(0,0,0,.5);
-
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-text-color);
 }
 
 .container {

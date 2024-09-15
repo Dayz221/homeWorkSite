@@ -2,15 +2,15 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
 
-    background-color: var(--second-background-color);
-    color: var(--hint-color);
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-button-text-color);
     transition: all .3s;
-    border: 2px solid var(--border-color);
+    border: 2px solid var();
 }
 
 button:hover {
-    color: var(--text-color);
-    background-color: var(--action-color);
+    /* color: var(--text-color); */
+    background-color: var(--tg-theme-button-color);
 }
 
 .fullWidth {
