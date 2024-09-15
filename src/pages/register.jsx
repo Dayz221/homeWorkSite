@@ -17,10 +17,7 @@ export default () => {
         if (fileId) {
             const fileUrl = await getFile(fileId);
     
-            if (fileUrl) {
-                console.log(`Фото профиля пользователя доступно по URL: ${fileUrl}`)
-                setUserPhoto(fileUrl)
-            }
+            if (fileUrl) setUserPhoto(fileUrl)
             
             setTimeout(() => setLoading(false), 500)
         }
