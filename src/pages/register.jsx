@@ -7,8 +7,8 @@ export default () => {
     const [userPhoto, setUserPhoto] = useState('https://placehold.co/400')
 
     useEffect(() => {
-        if (window.Telegram.WebApp && window.Telegram.WebApp.user && window.Telegram.WebApp.user.photo_url) {
-            setUserPhoto(window.Telegram.WebApp.user.photo_url)
+        if (typeof window.Telegram.WebApp.initDataUnsafe.user.photo_url !== 'undefined') {
+            setUserPhoto(window.Telegram.WebApp.initDataUnsafe.user.photo_url)
         }
     }, [])
 
