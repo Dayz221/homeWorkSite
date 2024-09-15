@@ -5,10 +5,14 @@ button {
     background-color: var(--second-background-color);
     color: var(--hint-color);
     transition: all .3s;
-    border: 2px solid rgba(0,0,0,.5);
+    border: 2px solid var(--border-color);
 }
 
 button:hover {
     color: var(--text-color);
     background-color: var(--action-color);
+}
+
+.fullWidth {
+    width: 100%;
 }
