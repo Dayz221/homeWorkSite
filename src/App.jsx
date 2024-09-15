@@ -5,7 +5,7 @@ export default () => {
 
   return (
     <>
-      {tg.initDataUnsafe.user.id ?
+      {(tg.initDataUnsafe.user.id !== undefined) ?
         <>
           <h2>User: {tg.initDataUnsafe.user.id}</h2>
           <h2>First Name: {tg.initDataUnsafe.user.first_name}</h2>
