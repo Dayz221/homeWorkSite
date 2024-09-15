@@ -24,8 +24,8 @@ export default () => {
     }, [])
 
     return (
-        !isLoading ?
-            <div className="container">
+        <div>
+            <div className="container" style={isLoading ? {display:"none"} : {}}>
                 <h2 className="mainLable">Регистрация</h2>
 
                 <div className="user_info">
@@ -37,9 +37,8 @@ export default () => {
                 <Input type="password" placeholder="Введите пароль" />
                 <Button text="Зарегистрироваться" fullWidth />
             </div>
-        :
-        <div style={{width:"100%", height:"100%", position:"relative"}}>
-            <Loader />
+            
+            <Loader state={isLoading} />
         </div>
     )
 }
