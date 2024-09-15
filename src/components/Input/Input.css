@@ -8,6 +8,7 @@ input {
     transition: all .3s;
     outline: none;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 input:hover, input:focus {
