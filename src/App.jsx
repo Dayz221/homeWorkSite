@@ -1,19 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './app.css'
+import UserPage from './pages/userPage.jsx'
+import Register from './pages/register.jsx'
+import Login from './pages/login'
 
 export default () => {
   const tg = window.Telegram.WebApp
+  tg.expand()
 
   return (
-    <>
-      {(tg.initDataUnsafe.user.id !== undefined) ?
-        <>
-          <h2>User: {tg.initDataUnsafe.user.id}</h2>
-          <h2>First Name: {tg.initDataUnsafe.user.first_name}</h2>
-          <h2>Username: {tg.initDataUnsafe.user?.username}</h2>
-        </>
-      :
-      <h2> Данные пользователя не найдены </h2>  
-    }
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/auth/register" element={<Register />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="*" element={<UserPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
