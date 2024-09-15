@@ -8,7 +8,7 @@ export default () => {
         <div className="container">
             <h2 className="mainLable">Регистрация</h2>
 
-            <PasswordInput />
+            <Input type="password" placeholder="Введите пароль" />
  
             <Button text="Зарегистрироваться" fullWidth />
         </div>

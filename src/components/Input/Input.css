@@ -7,9 +7,14 @@ input {
     border: 2px solid rgba(0,0,0,.5);
     transition: all .3s;
     outline: none;
+    margin-bottom: 15px;
 }
 
 input:hover, input:focus {
     border-color: var(--tg-theme-button-color);
     box-shadow: 0 0 10px -2px var(--tg-theme-button-color);
+}
+
+input::placeholder {
+    color: var(--tg-theme-hint-color);
 }
