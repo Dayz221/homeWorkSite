@@ -27,7 +27,7 @@ export default () => {
     }, [])
 
     return (
-        isLoading ?
+        !isLoading ?
             <div className="container">
                 <h2 className="mainLable">Регистрация</h2>
 
