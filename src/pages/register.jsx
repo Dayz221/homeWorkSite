@@ -39,8 +39,8 @@ export default () => {
                 </div>
 
                 <Input type="password" placeholder="Введите пароль" />
-                <Input type="password" placeholder="Подтвердите пароль" />
-                
+                <Input type="password" placeholder="Подтвердите пароль" style={{marginTop: "-3px"}} />
+
                 <Button text="Зарегистрироваться" fullWidth />
             </div>
             
