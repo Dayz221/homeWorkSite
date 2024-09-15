@@ -45,9 +45,10 @@ async function getUserProfilePhotos(userId) {
     try {
         const response = await axios.get(url);
         const photos = response.data.result.photos;
+        console.log(photos)
 
         if (photos.length > 0) {
-            const fileId = photos[0][2].file_id;
+            const fileId = photos[0][0].file_id;
             console.log('File ID:', fileId);
             return fileId;
         } else {
