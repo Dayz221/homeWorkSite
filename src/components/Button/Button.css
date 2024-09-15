@@ -2,14 +2,14 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
 
-    background-color: var(--tg-theme-bg-color);
-    color: var(--tg-theme-button-text-color);
+    background-color: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-hint-color);
     transition: all .3s;
     border: 2px solid var();
 }
 
 button:hover {
-    /* color: var(--text-color); */
+    color: var(--tg-theme-button-text-color);
     background-color: var(--tg-theme-button-color);
 }
 
