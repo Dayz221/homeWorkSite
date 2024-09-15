@@ -11,3 +11,9 @@ html {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 400px;
+}
