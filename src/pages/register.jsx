@@ -41,7 +41,9 @@ export default () => {
                 <Button text="Зарегистрироваться" fullWidth />
             </div>
         :
-        <Loader />
+        <div style={{width:"100%", height:"100%", position:"relative"}}>
+            <Loader />
+        </div>
     )
 }
 
