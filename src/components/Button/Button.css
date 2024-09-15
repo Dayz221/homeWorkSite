@@ -5,7 +5,7 @@ button {
     background-color: var(--tg-theme-secondary-bg-color);
     color: var(--tg-theme-accent-text-color);
     transition: all .3s;
-    border: 2px solid var(--tg-theme-button-text-color);
+    border: 2px solid var(--tg-theme-button-color);
     box-shadow: 0 0 8px 1px rgba(0,0,0,.3);
 }
 
