@@ -1,6 +1,14 @@
 button {
-    color: var(--tg-theme-button-text-color);
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: var(--tg-theme-button-color);
+
+    background-color: var(--second-background-color);
+    color: var(--hint-color);
+    transition: all .3s;
+    border: 2px solid rgba(0,0,0,.5);
+}
+
+button:hover {
+    color: var(--text-color);
+    background-color: var(--action-color);
 }

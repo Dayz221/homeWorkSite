@@ -1,3 +1,12 @@
 html {
-    background-color: var(--tg-theme-bg-color);
+    --background-color: #1E1E1E;
+    --second-background-color: #2A2A2B;
+    --text-color: white;
+    --hint-color: rgba(255, 255, 255, .6);
+    --destrictive-color: rgb(237, 58, 58);
+    --button-color: #212121;
+    --action-color: #8753FF;
+
+    background-color: var(--background-color);
+    color: var(--text-color)
 }
