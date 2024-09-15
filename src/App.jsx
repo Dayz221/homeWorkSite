@@ -6,8 +6,7 @@ import Register from './pages/register.jsx'
 import Login from './pages/login'
 
 export default () => {
-  const tg = window.Telegram.WebApp
-  tg.expand()
+  window.Telegram.WebApp.expand()
 
   return (
     <BrowserRouter>
