@@ -23,7 +23,7 @@ export default () => {
         }
 
         const groups = await axios.get(apiUrl+'/groups')
-        console.log(groups)
+        console.log(groups.data)
         setTimeout(() => setLoading(false), 300)
     }, [])
 
