@@ -76,8 +76,8 @@
     right: 20px;
     width: 10px;
     height: 10px;
-    transform: rotateZ(-45deg);
+    transform: rotateZ(45deg);
     transform: translateY(-50%);
     border-bottom: 2px solid var(--tg-theme-hint-color);
-    border-left: 2px solid var(--tg-theme-hint-color);
+    border-right: 2px solid var(--tg-theme-hint-color);
 }
