@@ -51,19 +51,21 @@
 .set_group {
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .set_group select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    outline: none;
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    background-color: var(--tg-theme-secondary-bg-color);
     cursor: pointer;
 }
 
