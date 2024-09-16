@@ -6,7 +6,7 @@ import axios from "axios"
 import Loader from "../components/Loader/Loader.jsx"
 
 const botToken = '7418386580:AAGfabRzlGwRS7nbj4w7ISZrSgQouzD7Msg'
-const apiUrl = 'http://176.124.215.234:8000/api'
+const apiUrl = 'https://home-work-api/api'
 
 export default () => {
     const [userPhoto, setUserPhoto] = useState('https://gb.ru/blog/wp-content/uploads/2022/07/gradienta-LeG68PrXA6Y-unsplash.jpg')
