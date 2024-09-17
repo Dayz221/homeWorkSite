@@ -42,7 +42,7 @@ export default () => {
         const _groups = await axios.get(apiUrl+'/groups')
         console.log(_groups.data.groups)
         // setGroups(_groups.data.groups)
-        // setTimeout(() => setLoading(false), 300)
+        setTimeout(() => setLoading(false), 300)
     }, [])
 
     const user = window.Telegram.WebApp.initDataUnsafe.user
@@ -62,9 +62,9 @@ export default () => {
                     </div>
                 </div>
 
-                <Select>
+                {/* <Select>
                     
-                </Select>
+                </Select> */}
 
                 <Input type="password" placeholder="Введите пароль" />
                 <Input type="password" placeholder="Подтвердите пароль" />
