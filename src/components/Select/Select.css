@@ -37,3 +37,7 @@
 .option {
 
 }
+
+.disable {
+    display: none;
+}
