@@ -35,9 +35,9 @@
     border-right: 3px solid var(--tg-theme-hint-color);
     border-bottom: 3px solid var(--tg-theme-hint-color);
     position: absolute;
-    top: 40%;
-    right: 13px;
-    transform: rotateZ(45deg);
+    top: 50%;
+    right: 11px;
+    transform: translate(-50%) rotateZ(45deg);
 }
 
 .arrow.active {
