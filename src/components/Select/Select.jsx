@@ -1,5 +1,5 @@
 import { useState } from "react"
-import classes from "classes"
+import classnames from "classnames"
 
 export const Option = ({ children, key }) => {
     return (
@@ -14,7 +14,7 @@ export const Select = ({ children }) => {
     return (
         <div className="select_container" onClick={ setIsExpanded(prev => !prev) }>
             <div className="current_element"></div>
-            <div classname={ classes(["arrow", {active: isExpanded} ]) } ></div>
+            <div classname={ classnames(["arrow", {active: isExpanded} ]) } ></div>
             <div className="elements">{ children }</div>
         </div>
     )
