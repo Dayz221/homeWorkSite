@@ -37,7 +37,7 @@
     position: absolute;
     top: 50%;
     right: 13px;
-    transform: rotateZ(45deg) translateY(-75%);
+    transform: rotateZ(45deg) translateY(-25%);
 }
 
 .arrow.active {
