@@ -12,7 +12,7 @@ const apiUrl = 'https://home-work-api.ru/api'
 export default () => {
     const [userPhoto, setUserPhoto] = useState('https://gb.ru/blog/wp-content/uploads/2022/07/gradienta-LeG68PrXA6Y-unsplash.jpg')
     const [isLoading, setLoading] = useState(true)
-    const [groups, setGroups] = useState()
+    const [groups, setGroups] = useState([])
 
     useEffect(() => {
         const func = async () => {
@@ -24,6 +24,7 @@ export default () => {
             }
     
             const _groups = await axios.get(apiUrl+'/groups')
+            console.log(_groups.data.groups)
             setGroups(_groups.data.groups)
             setTimeout(() => setLoading(false), 300)
         }
@@ -49,7 +50,7 @@ export default () => {
 
                 <Select>
                     {
-                        groups?.map(el => <Option key={el._id} >{ el.name }</Option>)
+                        groups.map(el => <Option key={el._id} >{ el.name }</Option>)
                     }
                 </Select>
 
