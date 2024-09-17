@@ -15,7 +15,7 @@ export const Select = ({ children }) => {
     return (
         <div className="select_container" onClick={ () => setIsExpanded(prev => !prev) }>
             <div className="current_element">dffdfdfd</div>
-            <div classname={ classnames("arrow", { active: isExpanded } ) } ></div>
+            {/* <div classname={ classnames("arrow", { active: isExpanded } ) } ></div> */}
             <div className={ classnames("elements", {disable: !isExpanded}) }>{ children }</div>
         </div>
     )
