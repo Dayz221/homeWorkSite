@@ -4,6 +4,7 @@ import Input from "../components/Input/Input.jsx"
 import '../styles/register.css'
 import axios from "axios"
 import Loader from "../components/Loader/Loader.jsx"
+import { Select, Option } from "../components/Select/Select.jsx"
 
 const botToken = '7418386580:AAGfabRzlGwRS7nbj4w7ISZrSgQouzD7Msg'
 const apiUrl = 'https://home-work-api.ru/api'
@@ -11,6 +12,7 @@ const apiUrl = 'https://home-work-api.ru/api'
 export default () => {
     const [userPhoto, setUserPhoto] = useState('https://gb.ru/blog/wp-content/uploads/2022/07/gradienta-LeG68PrXA6Y-unsplash.jpg')
     const [isLoading, setLoading] = useState(true)
+    const [groups, setGroups] = useState()
 
     const [groupId, setGroupId] = useState(null)
 
@@ -22,8 +24,8 @@ export default () => {
             if (fileUrl) setUserPhoto(fileUrl)
         }
 
-        const groups = await axios.get(apiUrl+'/groups')
-        console.log(groups.data)
+        const _groups = await axios.get(apiUrl+'/groups')
+        setGroups(_groups.data)
         setTimeout(() => setLoading(false), 300)
     }, [])
 
@@ -39,10 +41,18 @@ export default () => {
                         <img src={userPhoto} />
                     </div>
                     <div className="user_info_block">
-                        <div className="user_name">{user.last_name ? user.first_name + " " + user.last_name : user.first_name}</div>
+                        <div className="user_name">{ user.first_name + " " + user?.last_name }</div>
                         {user.username ? <div className="user_id">{"@" + user.username}</div> : null}
                     </div>
                 </div>
+
+                <Select>
+                    {
+                        groups.map(el => {
+                            <Option key={el._id} >{ el.name }</Option>                            
+                        })
+                    }
+                </Select>
 
                 <Input type="password" placeholder="Введите пароль" />
                 <Input type="password" placeholder="Подтвердите пароль" />
