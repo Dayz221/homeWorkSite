@@ -42,7 +42,7 @@ export default () => {
         const _groups = await axios.get(apiUrl+'/groups')
         console.log(_groups.data.groups)
         // setGroups(_groups.data.groups)
-        setTimeout(() => setLoading(false), 300)
+        // setTimeout(() => setLoading(false), 300)
     }, [])
 
     const user = window.Telegram.WebApp.initDataUnsafe.user
