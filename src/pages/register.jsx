@@ -44,16 +44,8 @@ export default () => {
                     </div>
                 </div>
 
-                <div class="set_group">
-                    <select>
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                    </select>
-                </div>
-
                 <Input type="password" placeholder="Введите пароль" />
-                <Input type="password" placeholder="Подтвердите пароль" style={{marginTop: "-7px"}} />
+                <Input type="password" placeholder="Подтвердите пароль" />
 
                 <Button text="Зарегистрироваться" fullWidth />
             </div>

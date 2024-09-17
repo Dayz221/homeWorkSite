@@ -7,7 +7,7 @@ input {
     border: 2px solid rgba(0,0,0,.5);
     transition: all .3s;
     outline: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 100%;
 }
 

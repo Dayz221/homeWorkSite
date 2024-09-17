@@ -6,6 +6,8 @@ button {
     color: var(--tg-theme-accent-text-color);
     transition: all .3s;
     border: 2px solid var(--tg-theme-button-color);
+
+    margin-top: 5px;
 }
 
 button:hover {
