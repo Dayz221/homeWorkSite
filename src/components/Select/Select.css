@@ -26,8 +26,7 @@
     position: absolute;
     top: 50%;
     right: 14px;
-    transform: rotateZ(45deg);
-    transform: translateY(-50%);
+    transform: rotateZ(45deg), translateY(-50%);
 }
 
 .arrow {
