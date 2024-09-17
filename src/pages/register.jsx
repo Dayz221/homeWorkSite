@@ -12,24 +12,7 @@ const apiUrl = 'https://home-work-api.ru/api'
 export default () => {
     const [userPhoto, setUserPhoto] = useState('https://gb.ru/blog/wp-content/uploads/2022/07/gradienta-LeG68PrXA6Y-unsplash.jpg')
     const [isLoading, setLoading] = useState(true)
-    const [groups, setGroups] = useState([
-        {
-            _id: 1,
-            name: 1
-        },
-        {
-            _id: 2,
-            name: 2
-        },
-        {
-            _id: 3,
-            name: 3
-        },
-        {
-            _id: 4,
-            name: 4
-        },
-    ])
+    const [groups, setGroups] = useState([])
 
     useEffect(async () => {
         const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id)
@@ -41,7 +24,7 @@ export default () => {
 
         const _groups = await axios.get(apiUrl+'/groups')
         console.log(_groups.data.groups)
-        // setGroups(_groups.data.groups)
+        setGroups(_groups.data.groups)
         setTimeout(() => setLoading(false), 300)
     }, [])
 
@@ -62,9 +45,11 @@ export default () => {
                     </div>
                 </div>
 
-                {/* <Select>
-                    
-                </Select> */}
+                <Select>
+                    {
+                        groups.map(el => <Option key={el._id} >{el.name}</Option>)
+                    }
+                </Select>
 
                 <Input type="password" placeholder="Введите пароль" />
                 <Input type="password" placeholder="Подтвердите пароль" />
