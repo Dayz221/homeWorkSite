@@ -4,9 +4,12 @@ import './styles/app.css'
 import UserPage from './pages/userPage.jsx'
 import Register from './pages/register.jsx'
 import Login from './pages/login'
+import { useEffect } from 'react'
 
 export default () => {
-  window.Telegram.WebApp.expand()
+  useEffect(() => {
+    window.Telegram.WebApp.expand()
+  }, [])
 
   return (
     <BrowserRouter>
