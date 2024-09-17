@@ -9,7 +9,6 @@ export const Option = ({ children, key }) => {
 
 export const Select = ({ children }) => {
     const [isExpanded, setIsExpanded] = useState(false)
-    console.log(children)
     
     return (
         <div className="select_container" onClick={ setIsExpanded(prev => !prev) }>
