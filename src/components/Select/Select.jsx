@@ -1,5 +1,6 @@
 import { useState } from "react"
 import classnames from "classnames"
+import './Select.css'
 
 export const Option = ({ children, key }) => {
     return (
