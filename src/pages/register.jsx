@@ -14,17 +14,20 @@ export default () => {
     const [isLoading, setLoading] = useState(true)
     const [groups, setGroups] = useState([])
 
-    useEffect(async () => {
-        const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id)
+    useEffect(() => {
+        const func = async () => {
+            const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id)
 
-        if (fileId) {
-            const fileUrl = await getFile(fileId)
-            if (fileUrl) setUserPhoto(fileUrl)
+            if (fileId) {
+                const fileUrl = await getFile(fileId)
+                if (fileUrl) setUserPhoto(fileUrl)
+            }
+    
+            const _groups = await axios.get(apiUrl+'/groups')
+            setGroups(_groups.data.groups)
+            setTimeout(() => setLoading(false), 300)
         }
-
-        const _groups = await axios.get(apiUrl+'/groups')
-        setGroups(_groups.data.groups)
-        setTimeout(() => setLoading(false), 300)
+        func()
     }, [])
 
     const user = window.Telegram.WebApp.initDataUnsafe.user
