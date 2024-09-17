@@ -49,9 +49,7 @@ export default () => {
 
                 <Select>
                     {
-                        groups.map(el => {
-                            <Option key={el._id} >{ el.name }</Option>                            
-                        })
+                        groups.map(el => <Option key={el._id} >{ el.name }</Option>)
                     }
                 </Select>
 
