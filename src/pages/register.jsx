@@ -14,6 +14,8 @@ export default () => {
     const [isLoading, setLoading] = useState(true)
     const [groups, setGroups] = useState([])
 
+    const [groupId, setGroupId] = useState("")
+
     useEffect(async () => {
         const fileId = await getUserProfilePhotos(window.Telegram.WebApp.initDataUnsafe.user.id)
 
