@@ -63,9 +63,7 @@ export default () => {
                 </div>
 
                 <Select>
-                    {
-                        groups.map(el => <Option key={el._id} >{ el.name }</Option>)
-                    }
+                    
                 </Select>
 
                 <Input type="password" placeholder="Введите пароль" />
