@@ -30,14 +30,14 @@
 }
 
 .arrow {
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid var(--tg-theme-hint-color);
-    border-bottom: 2px solid var(--tg-theme-hint-color);
+    width: 9px;
+    height: 9px;
+    border-right: 3px solid var(--tg-theme-hint-color);
+    border-bottom: 3px solid var(--tg-theme-hint-color);
     position: absolute;
     top: 50%;
-    right: 14px;
-    transform: rotateZ(45deg) translateY(-50%);
+    right: 13px;
+    transform: rotateZ(45deg) translateY(-75%);
 }
 
 .arrow.active {
